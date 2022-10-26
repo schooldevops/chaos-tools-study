@@ -1,0 +1,22 @@
+{
+    "title": "Do we remain available in face of deployment going down?",
+    "description": "We expect GitOps to handle",
+    "tags": ["kubernetes", "gitops"],
+    "method": [
+        {
+            "name": "delete-deployment",
+            "type": "action",
+            "provider": {
+              "type": "python",
+              "module": "chaosk8s.deployment.actions",
+              "func": "delete_deployment",
+              "arguments": {
+                "name": "nginx-deployment"
+              }
+            },
+            "pauses": {
+                "after": 20
+            }
+          }          
+    ]
+}

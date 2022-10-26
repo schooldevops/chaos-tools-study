@@ -1,0 +1,66 @@
+{
+  "chaoslib-version": "1.29.0",
+  "platform": "macOS-12.6-arm64-arm-64bit",
+  "node": "GLW4XPMQ2X",
+  "experiment": {
+    "title": "Do we remain available in face of deployment going down?",
+    "description": "We expect GitOps to handle",
+    "tags": [
+      "kubernetes",
+      "gitops"
+    ],
+    "method": [
+      {
+        "name": "delete-deployment",
+        "type": "action",
+        "provider": {
+          "type": "python",
+          "module": "chaosk8s.deployment.actions",
+          "func": "delete_deployment",
+          "arguments": {
+            "name": "nginx-deployment"
+          }
+        },
+        "pauses": {
+          "after": 20
+        }
+      }
+    ],
+    "dry": null
+  },
+  "start": "2022-10-20T05:25:03.354913",
+  "status": "completed",
+  "deviated": false,
+  "steady_states": {
+    "before": null,
+    "after": null,
+    "during": []
+  },
+  "run": [
+    {
+      "activity": {
+        "name": "delete-deployment",
+        "type": "action",
+        "provider": {
+          "type": "python",
+          "module": "chaosk8s.deployment.actions",
+          "func": "delete_deployment",
+          "arguments": {
+            "name": "nginx-deployment"
+          }
+        },
+        "pauses": {
+          "after": 20
+        }
+      },
+      "output": null,
+      "status": "succeeded",
+      "start": "2022-10-20T05:25:03.355718",
+      "end": "2022-10-20T05:25:03.395412",
+      "duration": 0.039694
+    }
+  ],
+  "rollbacks": [],
+  "end": "2022-10-20T05:25:23.404629",
+  "duration": 20.075259923934937
+}

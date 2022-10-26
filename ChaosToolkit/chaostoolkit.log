@@ -1,0 +1,827 @@
+[36m[2022-10-18 18:42:35 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-18 18:42:35 DEBUG] [cli:113][39m Running command 'discover'
+[36m[2022-10-18 18:42:35 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-18 18:44:59 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-18 18:44:59 DEBUG] [cli:113][39m Running command 'discover'
+[36m[2022-10-18 18:44:59 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-18 18:45:00 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[32m[2022-10-18 18:45:00 INFO] [package:22][39m Attempting to download and install package 'chaostoolkit-kubernete'
+[36m[2022-10-18 18:45:05 DEBUG] [package:32][39m 
+[36m[2022-10-18 18:45:05 DEBUG] [package:36][39m failed to install `chaostoolkit-kubernete`
+    =================
+    
+    =================
+    ERROR: Could not find a version that satisfies the requirement chaostoolkit-kubernete (from versions: none)
+    ERROR: No matching distribution found for chaostoolkit-kubernete
+    
+    
+[36m[2022-10-18 18:45:05 DEBUG] [cli:549][39m Failed to discover chaostoolkit-kubernete
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaostoolkit/cli.py", line 542, in discover
+        discovery = disco(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/discovery/discover.py", line 36, in discover
+        install(package_name)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/discovery/package.py", line 42, in install
+        raise DiscoveryFailed(msg)
+    chaoslib.exceptions.DiscoveryFailed: failed to install `chaostoolkit-kubernete`
+[31m[2022-10-18 18:45:05 CRITICAL] [cli:550][39m failed to install `chaostoolkit-kubernete`
+[36m[2022-10-18 18:45:23 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-18 18:45:23 DEBUG] [cli:113][39m Running command 'discover'
+[36m[2022-10-18 18:45:23 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-18 18:45:24 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[32m[2022-10-18 18:45:24 INFO] [package:22][39m Attempting to download and install package 'chaostoolkit-kubernetes'
+[36m[2022-10-18 18:45:38 DEBUG] [package:32][39m Collecting chaostoolkit-kubernetes
+      Downloading chaostoolkit_kubernetes-0.26.3-py3-none-any.whl (32 kB)
+    Requirement already satisfied: chaostoolkit-lib>=0.20.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from chaostoolkit-kubernetes) (1.29.0)
+    Collecting kubernetes
+      Downloading kubernetes-24.2.0-py2.py3-none-any.whl (1.5 MB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 6.7 MB/s eta 0:00:00
+    Requirement already satisfied: logzero in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from chaostoolkit-kubernetes) (1.7.0)
+    Requirement already satisfied: pyyaml in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from chaostoolkit-kubernetes) (6.0)
+    Collecting dateparser
+      Downloading dateparser-1.1.1-py2.py3-none-any.whl (288 kB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.9/288.9 kB 5.4 MB/s eta 0:00:00
+    Requirement already satisfied: importlib-metadata~=4.4 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from chaostoolkit-lib>=0.20.0->chaostoolkit-kubernetes) (4.13.0)
+    Requirement already satisfied: requests~=2.21 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from chaostoolkit-lib>=0.20.0->chaostoolkit-kubernetes) (2.28.1)
+    Collecting tzlocal
+      Downloading tzlocal-4.2-py3-none-any.whl (19 kB)
+    Collecting pytz
+      Downloading pytz-2022.4-py2.py3-none-any.whl (500 kB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 500.8/500.8 kB 7.2 MB/s eta 0:00:00
+    Collecting regex!=2019.02.19,!=2021.8.27,<2022.3.15
+      Downloading regex-2022.3.2-cp310-cp310-macosx_11_0_arm64.whl (281 kB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281.8/281.8 kB 6.4 MB/s eta 0:00:00
+    Requirement already satisfied: python-dateutil in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from dateparser->chaostoolkit-kubernetes) (2.8.2)
+    Requirement already satisfied: six>=1.9.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from kubernetes->chaostoolkit-kubernetes) (1.16.0)
+    Collecting google-auth>=1.0.1
+      Downloading google_auth-2.13.0-py2.py3-none-any.whl (174 kB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 174.5/174.5 kB 4.7 MB/s eta 0:00:00
+    Collecting websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0
+      Downloading websocket_client-1.4.1-py3-none-any.whl (55 kB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.0/55.0 kB 1.7 MB/s eta 0:00:00
+    Requirement already satisfied: certifi>=14.05.14 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from kubernetes->chaostoolkit-kubernetes) (2022.9.24)
+    Requirement already satisfied: urllib3>=1.24.2 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from kubernetes->chaostoolkit-kubernetes) (1.26.9)
+    Requirement already satisfied: setuptools>=21.0.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from kubernetes->chaostoolkit-kubernetes) (58.1.0)
+    Collecting requests-oauthlib
+      Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+    Collecting pyasn1-modules>=0.2.1
+      Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.3/155.3 kB 3.6 MB/s eta 0:00:00
+    Collecting cachetools<6.0,>=2.0.0
+      Downloading cachetools-5.2.0-py3-none-any.whl (9.3 kB)
+    Requirement already satisfied: rsa<5,>=3.1.4 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from google-auth>=1.0.1->kubernetes->chaostoolkit-kubernetes) (4.7.2)
+    Requirement already satisfied: zipp>=0.5 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from importlib-metadata~=4.4->chaostoolkit-lib>=0.20.0->chaostoolkit-kubernetes) (3.9.0)
+    Requirement already satisfied: idna<4,>=2.5 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from requests~=2.21->chaostoolkit-lib>=0.20.0->chaostoolkit-kubernetes) (3.4)
+    Requirement already satisfied: charset-normalizer<3,>=2 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from requests~=2.21->chaostoolkit-lib>=0.20.0->chaostoolkit-kubernetes) (2.1.1)
+    Collecting oauthlib>=3.0.0
+      Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.7/151.7 kB 4.5 MB/s eta 0:00:00
+    Collecting pytz-deprecation-shim
+      Downloading pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl (15 kB)
+    Requirement already satisfied: pyasn1<0.5.0,>=0.4.6 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from pyasn1-modules>=0.2.1->google-auth>=1.0.1->kubernetes->chaostoolkit-kubernetes) (0.4.8)
+    Collecting tzdata
+      Downloading tzdata-2022.5-py2.py3-none-any.whl (336 kB)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 336.7/336.7 kB 4.9 MB/s eta 0:00:00
+    Installing collected packages: pytz, websocket-client, tzdata, regex, pyasn1-modules, oauthlib, cachetools, requests-oauthlib, pytz-deprecation-shim, google-auth, tzlocal, kubernetes, dateparser, chaostoolkit-kubernetes
+    Successfully installed cachetools-5.2.0 chaostoolkit-kubernetes-0.26.3 dateparser-1.1.1 google-auth-2.13.0 kubernetes-24.2.0 oauthlib-3.2.2 pyasn1-modules-0.2.8 pytz-2022.4 pytz-deprecation-shim-0.1.0.post0 regex-2022.3.2 requests-oauthlib-1.3.1 tzdata-2022.5 tzlocal-4.2 websocket-client-1.4.1
+    
+[32m[2022-10-18 18:45:38 INFO] [package:44][39m Package downloaded and installed in current environment
+[32m[2022-10-18 18:45:43 INFO] [__init__:129][39m Discovering capabilities from chaostoolkit-kubernetes
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.actions
+[32m[2022-10-18 18:45:43 INFO] [discover:86][39m Searching for probes in chaosk8s.probes
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Tuple[typing.Dict[str, typing.Any], typing.Dict[str, typing.Any]]' could not be ported to something meaningful
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Optional[bool]' could not be ported to something meaningful
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Optional[str]' could not be ported to something meaningful
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.deployment.actions
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.deployment.probes
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Optional[bool]' could not be ported to something meaningful
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Optional[bool]' could not be ported to something meaningful
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Optional[bool]' could not be ported to something meaningful
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Optional[bool]' could not be ported to something meaningful
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.node.actions
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m '<class 'kubernetes.client.models.v1_node.V1Node'>' could not be ported to something meaningful
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.node.probes
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.pod.actions
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Union[str, typing.List[str]]' could not be ported to something meaningful
+[32m[2022-10-18 18:45:43 INFO] [discover:86][39m Searching for probes in chaosk8s.pod.probes
+[36m[2022-10-18 18:45:43 DEBUG] [discover:188][39m 'typing.Optional[str]' could not be ported to something meaningful
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.replicaset.actions
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.service.actions
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.service.probes
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.statefulset.actions
+[32m[2022-10-18 18:45:43 INFO] [discover:86][39m Searching for probes in chaosk8s.statefulset.probes
+[32m[2022-10-18 18:45:43 INFO] [discover:78][39m Searching for actions in chaosk8s.crd.actions
+[32m[2022-10-18 18:45:43 INFO] [discover:86][39m Searching for probes in chaosk8s.crd.probes
+[32m[2022-10-18 18:45:43 INFO] [cli:555][39m Discovery outcome saved in ./discovery.json
+[36m[2022-10-18 18:52:16 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-18 18:52:16 DEBUG] [cli:113][39m Running command 'init'
+[36m[2022-10-18 18:52:16 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-18 18:53:54 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-18 18:53:54 DEBUG] [cli:113][39m Running command 'init'
+[36m[2022-10-18 18:53:54 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-18 18:53:55 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 13:53:08 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 13:53:08 DEBUG] [cli:113][39m Running command 'init'
+[36m[2022-10-20 13:53:08 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 13:53:08 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 13:55:35 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 13:55:35 DEBUG] [cli:113][39m Running command 'init'
+[36m[2022-10-20 13:55:35 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 13:55:36 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 13:57:43 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 13:57:43 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 13:57:43 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 13:57:44 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 13:57:44 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 13:57:44 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 13:57:44 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 13:57:44 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2022-10-20 13:57:44 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 13:57:44 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 13:57:44 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 13:57:44 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 13:57:52 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 13:57:52 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 13:57:52 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 13:57:52 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2022-10-20 13:57:52 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 13:57:52 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 13:57:52 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 13:57:52 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 13:57:52 INFO] [run:320][39m Running experiment: AWS test for chaostoolkit
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 13:57:52 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 13:57:52 INFO] [run:348][39m Rollbacks strategy: default
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 13:57:52 DEBUG] [run:506][39m Running steady-state hypothesis before the method
+[32m[2022-10-20 13:57:52 INFO] [hypothesis:182][39m Steady state hypothesis: Hypothesis01
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 13:57:52 INFO] [activity:204][39m Probe: count_pods
+[36m[2022-10-20 13:57:52 DEBUG] [python:33][39m Activity 'count_pods' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/pod/probes.py'
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 13:57:52 DEBUG] [activity:276][39m Activity failed
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+        conn = connection.create_connection(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+        raise err
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+        sock.connect(sa)
+    ConnectionRefusedError: [Errno 61] Connection refused
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+        httplib_response = self._make_request(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+        self._validate_conn(conn)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1040, in _validate_conn
+        conn.connect()
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 358, in connect
+        self.sock = conn = self._new_conn()
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+        raise NewConnectionError(
+    urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x120314d60>: Failed to establish a new connection: [Errno 61] Connection refused
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/pod/probes.py", line 218, in count_pods
+        ret = v1.list_namespaced_pod(ns, label_selector=label_selector)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 15697, in list_namespaced_pod
+        return self.list_namespaced_pod_with_http_info(namespace, **kwargs)  # noqa: E501
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 15812, in list_namespaced_pod_with_http_info
+        return self.api_client.call_api(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 348, in call_api
+        return self.__call_api(resource_path, method,
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 180, in __call_api
+        response_data = self.request(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 373, in request
+        return self.rest_client.GET(url,
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/rest.py", line 240, in GET
+        return self.request("GET", url,
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/rest.py", line 213, in request
+        r = self.pool_manager.request(method, url,
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/request.py", line 74, in request
+        return self.request_encode_url(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/request.py", line 96, in request_encode_url
+        return self.urlopen(method, url, **extra_kw)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+        response = conn.urlopen(method, u.request_uri, **kw)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 813, in urlopen
+        return self.urlopen(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 813, in urlopen
+        return self.urlopen(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 813, in urlopen
+        return self.urlopen(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+        retries = retries.increment(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+        raise MaxRetryError(_pool, url, error or ResponseError(cause))
+    urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=6443): Max retries exceeded with url: /api/v1/namespaces/default/pods?labelSelector=app%3Dtest (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x120314d60>: Failed to establish a new connection: [Errno 61] Connection refused'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/activity.py", line 269, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/pod/probes.py", line 218, in count_pods
+        ret = v1.list_namespaced_pod(ns, label_selector=label_selector)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 15697, in list_namespaced_pod
+        return self.list_namespaced_pod_with_http_info(namespace, **kwargs)  # noqa: E501
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 15812, in list_namespaced_pod_with_http_info
+        return self.api_client.call_api(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 348, in call_api
+        return self.__call_api(resource_path, method,
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 180, in __call_api
+        response_data = self.request(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 373, in request
+        return self.rest_client.GET(url,
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/rest.py", line 240, in GET
+        return self.request("GET", url,
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/kubernetes/client/rest.py", line 213, in request
+        r = self.pool_manager.request(method, url,
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/request.py", line 74, in request
+        return self.request_encode_url(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/request.py", line 96, in request_encode_url
+        return self.urlopen(method, url, **extra_kw)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+        response = conn.urlopen(method, u.request_uri, **kw)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 813, in urlopen
+        return self.urlopen(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 813, in urlopen
+        return self.urlopen(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 813, in urlopen
+        return self.urlopen(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+        retries = retries.increment(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+        raise MaxRetryError(_pool, url, error or ResponseError(cause))
+    chaoslib.exceptions.ActivityFailed: urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=6443): Max retries exceeded with url: /api/v1/namespaces/default/pods?labelSelector=app%3Dtest (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x120314d60>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[31m[2022-10-20 13:57:52 ERROR] [activity:229][39m   => failed: urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=6443): Max retries exceeded with url: /api/v1/namespaces/default/pods?labelSelector=app%3Dtest (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x120314d60>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[33m[2022-10-20 13:57:52 WARNING] [hypothesis:208][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[31m[2022-10-20 13:57:52 CRITICAL] [run:516][39m Steady state probe 'count_pods' is not in the given tolerance so failing this experiment
+[32m[2022-10-20 13:57:52 INFO] [run:458][39m Experiment ended with status: failed
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 13:57:52 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 13:57:52 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 13:59:42 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 13:59:42 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 13:59:42 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 13:59:44 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 13:59:44 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 13:59:44 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 13:59:44 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 13:59:44 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2022-10-20 13:59:44 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 13:59:44 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 13:59:44 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 13:59:44 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 13:59:44 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 13:59:44 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 13:59:44 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 13:59:44 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2022-10-20 13:59:44 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 13:59:44 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 13:59:44 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 13:59:44 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 13:59:44 INFO] [run:320][39m Running experiment: AWS test for chaostoolkit
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 13:59:45 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 13:59:45 INFO] [run:348][39m Rollbacks strategy: default
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 13:59:45 DEBUG] [run:506][39m Running steady-state hypothesis before the method
+[32m[2022-10-20 13:59:45 INFO] [hypothesis:182][39m Steady state hypothesis: Hypothesis01
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 13:59:45 INFO] [activity:204][39m Probe: count_pods
+[36m[2022-10-20 13:59:45 DEBUG] [python:33][39m Activity 'count_pods' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/pod/probes.py'
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 13:59:45 DEBUG] [probes:219][39m Found 0 pods matching label 'app=test' in ns 'default'
+[36m[2022-10-20 13:59:45 DEBUG] [activity:221][39m   => succeeded with '0'
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[36m[2022-10-20 13:59:45 DEBUG] [hypothesis:221][39m allowed tolerance is normal
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[31m[2022-10-20 13:59:45 CRITICAL] [run:516][39m Steady state probe 'count_pods' is not in the given tolerance so failing this experiment
+[32m[2022-10-20 13:59:45 INFO] [run:458][39m Experiment ended with status: failed
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 13:59:45 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 13:59:45 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:13:29 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 14:13:29 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 14:13:29 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 14:13:30 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 14:13:30 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:13:30 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:13:30 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:13:30 DEBUG] [caching:35][39m Cached 0 activities
+[32m[2022-10-20 14:13:30 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 14:13:30 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:13:30 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:13:30 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 14:13:30 DEBUG] [caching:42][39m Clearing activities cache
+[31m[2022-10-20 14:13:30 ERROR] [cli:260][39m an experiment requires a method, which can be empty for only checking steady state hypothesis 
+[36m[2022-10-20 14:13:30 DEBUG] [cli:261][39m an experiment requires a method, which can be empty for only checking steady state hypothesis 
+[36m[2022-10-20 14:14:03 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 14:14:03 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 14:14:03 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 14:14:03 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 14:14:03 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:14:03 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:14:03 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:14:03 DEBUG] [caching:35][39m Cached 2 activities
+[32m[2022-10-20 14:14:03 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 14:14:03 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:14:03 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:14:03 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 14:14:04 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 14:14:04 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:14:04 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:14:04 DEBUG] [caching:35][39m Cached 2 activities
+[36m[2022-10-20 14:14:04 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:14:04 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:14:04 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 14:14:04 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 14:14:04 INFO] [run:320][39m Running experiment: Do we remain available in face of deployment going down?
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 14:14:04 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 14:14:04 INFO] [run:348][39m Rollbacks strategy: default
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:14:04 DEBUG] [run:506][39m Running steady-state hypothesis before the method
+[32m[2022-10-20 14:14:04 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:14:04 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:14:04 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:14:04 DEBUG] [probes:43][39m Found 0 deployment(s) named 'nginx' in ns 'default'
+[36m[2022-10-20 14:14:04 DEBUG] [activity:276][39m Activity failed
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: Deployment 'nginx' was not found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/activity.py", line 269, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx' was not found
+[31m[2022-10-20 14:14:04 ERROR] [activity:229][39m   => failed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx' was not found
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[33m[2022-10-20 14:14:04 WARNING] [hypothesis:208][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[31m[2022-10-20 14:14:04 CRITICAL] [run:516][39m Steady state probe 'all-our-microservices-should-be-healthy' is not in the given tolerance so failing this experiment
+[32m[2022-10-20 14:14:04 INFO] [run:458][39m Experiment ended with status: failed
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:14:04 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 14:14:04 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:15:31 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 14:15:31 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 14:15:31 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 14:15:32 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:15:32 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:15:32 DEBUG] [caching:35][39m Cached 2 activities
+[32m[2022-10-20 14:15:32 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 14:15:32 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:15:32 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:15:32 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 14:15:32 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 14:15:32 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:15:32 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:15:32 DEBUG] [caching:35][39m Cached 2 activities
+[36m[2022-10-20 14:15:32 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:15:32 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:15:32 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 14:15:32 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 14:15:32 INFO] [run:320][39m Running experiment: Do we remain available in face of deployment going down?
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 14:15:32 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 14:15:32 INFO] [run:348][39m Rollbacks strategy: default
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:15:32 DEBUG] [run:506][39m Running steady-state hypothesis before the method
+[32m[2022-10-20 14:15:32 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:15:32 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:15:32 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:15:32 DEBUG] [probes:43][39m Found 1 deployment(s) named 'nginx-deployment' in ns 'default'
+[36m[2022-10-20 14:15:32 DEBUG] [probes:49][39m Deployment has '2' available replicas
+[36m[2022-10-20 14:15:32 DEBUG] [activity:221][39m   => succeeded with 'True'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[36m[2022-10-20 14:15:32 DEBUG] [hypothesis:221][39m allowed tolerance is True
+[32m[2022-10-20 14:15:32 INFO] [hypothesis:231][39m Steady state hypothesis is met!
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[32m[2022-10-20 14:15:32 INFO] [run:607][39m Playing your experiment's method now...
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'method'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:15:32 INFO] [activity:204][39m Action: delete-deployment
+[36m[2022-10-20 14:15:32 DEBUG] [python:33][39m Activity 'delete-deployment' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/actions.py'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:15:32 DEBUG] [actions:62][39m Found 1 deployments named 'nginx-deployment'
+[36m[2022-10-20 14:15:32 DEBUG] [activity:223][39m   => succeeded without any result value
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'method'
+[36m[2022-10-20 14:15:32 DEBUG] [run:536][39m Running steady-state hypothesis after the method
+[32m[2022-10-20 14:15:32 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:15:32 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:15:32 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:15:32 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:15:32 DEBUG] [probes:43][39m Found 0 deployment(s) named 'nginx-deployment' in ns 'default'
+[36m[2022-10-20 14:15:32 DEBUG] [activity:276][39m Activity failed
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/activity.py", line 269, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[31m[2022-10-20 14:15:33 ERROR] [activity:229][39m   => failed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[36m[2022-10-20 14:15:33 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[33m[2022-10-20 14:15:33 WARNING] [hypothesis:208][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2022-10-20 14:15:33 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[31m[2022-10-20 14:15:33 CRITICAL] [run:545][39m Steady state probe 'all-our-microservices-should-be-healthy' is not in the given tolerance so failing this experiment
+[32m[2022-10-20 14:15:33 INFO] [run:458][39m Experiment ended with status: deviated
+[32m[2022-10-20 14:15:33 INFO] [run:460][39m The steady-state has deviated, a weakness may have been discovered
+[36m[2022-10-20 14:15:33 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:15:33 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 14:15:33 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:19:21 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 14:19:21 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 14:19:21 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 14:19:22 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 14:19:22 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:19:22 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:19:22 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:19:22 DEBUG] [caching:35][39m Cached 2 activities
+[32m[2022-10-20 14:19:22 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 14:19:22 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:19:22 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:19:22 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 14:19:22 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 14:19:22 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:19:22 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:19:22 DEBUG] [caching:35][39m Cached 2 activities
+[36m[2022-10-20 14:19:22 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:19:22 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:19:22 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 14:19:22 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 14:19:22 INFO] [run:320][39m Running experiment: Do we remain available in face of deployment going down?
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 14:19:23 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 14:19:23 INFO] [run:348][39m Rollbacks strategy: default
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:19:23 DEBUG] [run:506][39m Running steady-state hypothesis before the method
+[32m[2022-10-20 14:19:23 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:19:23 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:19:23 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:19:23 DEBUG] [probes:43][39m Found 0 deployment(s) named 'nginx-deployment' in ns 'default'
+[36m[2022-10-20 14:19:23 DEBUG] [activity:276][39m Activity failed
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/activity.py", line 269, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[31m[2022-10-20 14:19:23 ERROR] [activity:229][39m   => failed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[33m[2022-10-20 14:19:23 WARNING] [hypothesis:208][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[31m[2022-10-20 14:19:23 CRITICAL] [run:516][39m Steady state probe 'all-our-microservices-should-be-healthy' is not in the given tolerance so failing this experiment
+[32m[2022-10-20 14:19:23 INFO] [run:458][39m Experiment ended with status: failed
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:19:23 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 14:19:23 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:20:14 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 14:20:14 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 14:20:14 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 14:20:15 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 14:20:15 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:20:15 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:20:15 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:20:15 DEBUG] [caching:35][39m Cached 2 activities
+[32m[2022-10-20 14:20:15 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 14:20:15 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:20:15 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:20:15 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 14:20:16 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 14:20:16 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:20:16 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:20:16 DEBUG] [caching:35][39m Cached 2 activities
+[36m[2022-10-20 14:20:16 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:20:16 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:20:16 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 14:20:16 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 14:20:16 INFO] [run:320][39m Running experiment: Do we remain available in face of deployment going down?
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 14:20:16 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 14:20:16 INFO] [run:348][39m Rollbacks strategy: default
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:20:16 DEBUG] [run:506][39m Running steady-state hypothesis before the method
+[32m[2022-10-20 14:20:16 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:20:16 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:20:16 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:20:16 DEBUG] [probes:43][39m Found 1 deployment(s) named 'nginx-deployment' in ns 'default'
+[36m[2022-10-20 14:20:16 DEBUG] [probes:49][39m Deployment has '2' available replicas
+[36m[2022-10-20 14:20:16 DEBUG] [activity:221][39m   => succeeded with 'True'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[36m[2022-10-20 14:20:16 DEBUG] [hypothesis:221][39m allowed tolerance is True
+[32m[2022-10-20 14:20:16 INFO] [hypothesis:231][39m Steady state hypothesis is met!
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[32m[2022-10-20 14:20:16 INFO] [run:607][39m Playing your experiment's method now...
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'method'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:20:16 INFO] [activity:204][39m Action: delete-deployment
+[36m[2022-10-20 14:20:16 DEBUG] [python:33][39m Activity 'delete-deployment' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/actions.py'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:20:16 DEBUG] [actions:62][39m Found 1 deployments named 'nginx-deployment'
+[36m[2022-10-20 14:20:16 DEBUG] [activity:223][39m   => succeeded without any result value
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'method'
+[36m[2022-10-20 14:20:16 DEBUG] [run:536][39m Running steady-state hypothesis after the method
+[32m[2022-10-20 14:20:16 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:20:16 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:20:16 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:20:16 DEBUG] [probes:43][39m Found 0 deployment(s) named 'nginx-deployment' in ns 'default'
+[36m[2022-10-20 14:20:16 DEBUG] [activity:276][39m Activity failed
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/activity.py", line 269, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[31m[2022-10-20 14:20:16 ERROR] [activity:229][39m   => failed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[33m[2022-10-20 14:20:16 WARNING] [hypothesis:208][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[31m[2022-10-20 14:20:16 CRITICAL] [run:545][39m Steady state probe 'all-our-microservices-should-be-healthy' is not in the given tolerance so failing this experiment
+[32m[2022-10-20 14:20:16 INFO] [run:458][39m Experiment ended with status: deviated
+[32m[2022-10-20 14:20:16 INFO] [run:460][39m The steady-state has deviated, a weakness may have been discovered
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:20:16 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 14:20:16 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:23:40 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 14:23:40 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 14:23:40 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 14:23:40 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 14:23:40 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:23:40 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:23:40 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:23:40 DEBUG] [caching:35][39m Cached 2 activities
+[32m[2022-10-20 14:23:40 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 14:23:40 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:23:40 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:23:40 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 14:23:41 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 14:23:41 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:23:41 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:23:41 DEBUG] [caching:35][39m Cached 2 activities
+[36m[2022-10-20 14:23:41 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:23:41 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:23:41 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 14:23:41 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 14:23:41 INFO] [run:320][39m Running experiment: Do we remain available in face of deployment going down?
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 14:23:41 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 14:23:41 INFO] [run:348][39m Rollbacks strategy: default
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:23:41 DEBUG] [run:506][39m Running steady-state hypothesis before the method
+[32m[2022-10-20 14:23:41 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:23:41 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:23:41 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:23:41 DEBUG] [probes:43][39m Found 0 deployment(s) named 'nginx-deployment' in ns 'default'
+[36m[2022-10-20 14:23:41 DEBUG] [activity:276][39m Activity failed
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/activity.py", line 269, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[31m[2022-10-20 14:23:41 ERROR] [activity:229][39m   => failed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[33m[2022-10-20 14:23:41 WARNING] [hypothesis:208][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[31m[2022-10-20 14:23:41 CRITICAL] [run:516][39m Steady state probe 'all-our-microservices-should-be-healthy' is not in the given tolerance so failing this experiment
+[32m[2022-10-20 14:23:41 INFO] [run:458][39m Experiment ended with status: failed
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:23:41 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 14:23:41 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:23:57 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 14:23:57 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 14:23:57 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 14:23:57 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 14:23:57 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:23:57 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:23:57 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:23:57 DEBUG] [caching:35][39m Cached 2 activities
+[32m[2022-10-20 14:23:57 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 14:23:57 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:23:57 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:23:57 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 14:23:58 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 14:23:58 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:23:58 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:23:58 DEBUG] [caching:35][39m Cached 2 activities
+[36m[2022-10-20 14:23:58 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:23:58 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:23:58 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 14:23:58 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 14:23:58 INFO] [run:320][39m Running experiment: Do we remain available in face of deployment going down?
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 14:23:58 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 14:23:58 INFO] [run:348][39m Rollbacks strategy: default
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:23:58 DEBUG] [run:506][39m Running steady-state hypothesis before the method
+[32m[2022-10-20 14:23:58 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:23:58 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:23:58 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:23:58 DEBUG] [probes:43][39m Found 1 deployment(s) named 'nginx-deployment' in ns 'default'
+[36m[2022-10-20 14:23:58 DEBUG] [probes:49][39m Deployment has '2' available replicas
+[36m[2022-10-20 14:23:58 DEBUG] [activity:221][39m   => succeeded with 'True'
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[36m[2022-10-20 14:23:58 DEBUG] [hypothesis:221][39m allowed tolerance is True
+[32m[2022-10-20 14:23:58 INFO] [hypothesis:231][39m Steady state hypothesis is met!
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[32m[2022-10-20 14:23:58 INFO] [run:607][39m Playing your experiment's method now...
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:399][39m No controls to apply on 'method'
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:23:58 INFO] [activity:204][39m Action: delete-deployment
+[36m[2022-10-20 14:23:58 DEBUG] [python:33][39m Activity 'delete-deployment' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/actions.py'
+[36m[2022-10-20 14:23:58 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:23:58 DEBUG] [actions:62][39m Found 1 deployments named 'nginx-deployment'
+[36m[2022-10-20 14:23:58 DEBUG] [activity:223][39m   => succeeded without any result value
+[32m[2022-10-20 14:23:58 INFO] [activity:239][39m Pausing after activity for 20s...
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:399][39m No controls to apply on 'method'
+[36m[2022-10-20 14:24:18 DEBUG] [run:536][39m Running steady-state hypothesis after the method
+[32m[2022-10-20 14:24:18 INFO] [hypothesis:182][39m Steady state hypothesis: Verifying deployment remains healthy
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:24:18 INFO] [activity:204][39m Probe: all-our-microservices-should-be-healthy
+[36m[2022-10-20 14:24:18 DEBUG] [python:33][39m Activity 'all-our-microservices-should-be-healthy' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py'
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:24:18 DEBUG] [probes:43][39m Found 0 deployment(s) named 'nginx-deployment' in ns 'default'
+[36m[2022-10-20 14:24:18 DEBUG] [activity:276][39m Activity failed
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/activity.py", line 269, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 58, in run_python_activity
+        raise ActivityFailed(
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaoslib/provider/python.py", line 56, in run_python_activity
+        return func(**arguments)
+      File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/probes.py", line 46, in deployment_available_and_healthy
+        raise ActivityFailed(f"Deployment '{name}' was not found")
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[31m[2022-10-20 14:24:18 ERROR] [activity:229][39m   => failed: chaoslib.exceptions.ActivityFailed: Deployment 'nginx-deployment' was not found
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[33m[2022-10-20 14:24:18 WARNING] [hypothesis:208][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:399][39m No controls to apply on 'hypothesis'
+[31m[2022-10-20 14:24:18 CRITICAL] [run:545][39m Steady state probe 'all-our-microservices-should-be-healthy' is not in the given tolerance so failing this experiment
+[32m[2022-10-20 14:24:18 INFO] [run:458][39m Experiment ended with status: deviated
+[32m[2022-10-20 14:24:18 INFO] [run:460][39m The steady-state has deviated, a weakness may have been discovered
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:24:18 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 14:24:18 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:25:02 DEBUG] [cli:112][39m ###############################################################################
+[36m[2022-10-20 14:25:02 DEBUG] [cli:113][39m Running command 'run'
+[36m[2022-10-20 14:25:02 DEBUG] [cli:117][39m Using settings file '/Users/1111489/.chaostoolkit/settings.yaml'
+[36m[2022-10-20 14:25:02 DEBUG] [settings:30][39m The Chaos Toolkit settings file could not be found at '/Users/1111489/.chaostoolkit/settings.yaml'.
+[36m[2022-10-20 14:25:02 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:25:02 DEBUG] [__init__:399][39m No controls to apply on 'loader'
+[36m[2022-10-20 14:25:02 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:25:02 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2022-10-20 14:25:02 INFO] [experiment:58][39m Validating the experiment's syntax
+[36m[2022-10-20 14:25:02 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:25:02 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:25:02 DEBUG] [secret:104][39m Done loading secrets
+[32m[2022-10-20 14:25:03 INFO] [experiment:109][39m Experiment looks valid
+[36m[2022-10-20 14:25:03 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2022-10-20 14:25:03 DEBUG] [caching:24][39m Building activity cache...
+[36m[2022-10-20 14:25:03 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2022-10-20 14:25:03 DEBUG] [configuration:63][39m Loading configuration...
+[36m[2022-10-20 14:25:03 DEBUG] [secret:78][39m Loading secrets...
+[36m[2022-10-20 14:25:03 DEBUG] [secret:104][39m Done loading secrets
+[36m[2022-10-20 14:25:03 DEBUG] [configuration:160][39m Loading dynamic configuration...
+[32m[2022-10-20 14:25:03 INFO] [run:320][39m Running experiment: Do we remain available in face of deployment going down?
+[36m[2022-10-20 14:25:03 DEBUG] [__init__:52][39m Initializing controls
+[32m[2022-10-20 14:25:03 INFO] [run:344][39m Steady-state strategy: default
+[32m[2022-10-20 14:25:03 INFO] [run:348][39m Rollbacks strategy: default
+[32m[2022-10-20 14:25:03 INFO] [run:353][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2022-10-20 14:25:03 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[32m[2022-10-20 14:25:03 INFO] [run:607][39m Playing your experiment's method now...
+[36m[2022-10-20 14:25:03 DEBUG] [__init__:399][39m No controls to apply on 'method'
+[36m[2022-10-20 14:25:03 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[32m[2022-10-20 14:25:03 INFO] [activity:204][39m Action: delete-deployment
+[36m[2022-10-20 14:25:03 DEBUG] [python:33][39m Activity 'delete-deployment' loaded from '/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/chaosk8s/deployment/actions.py'
+[36m[2022-10-20 14:25:03 DEBUG] [__init__:73][39m Using Kubernetes context 'default' from config '/Users/1111489/.kube/config'
+[36m[2022-10-20 14:25:03 DEBUG] [actions:62][39m Found 1 deployments named 'nginx-deployment'
+[36m[2022-10-20 14:25:03 DEBUG] [activity:223][39m   => succeeded without any result value
+[32m[2022-10-20 14:25:03 INFO] [activity:239][39m Pausing after activity for 20s...
+[36m[2022-10-20 14:25:23 DEBUG] [__init__:399][39m No controls to apply on 'activity'
+[36m[2022-10-20 14:25:23 DEBUG] [__init__:399][39m No controls to apply on 'method'
+[32m[2022-10-20 14:25:23 INFO] [run:893][39m Let's rollback...
+[36m[2022-10-20 14:25:23 DEBUG] [__init__:399][39m No controls to apply on 'rollback'
+[32m[2022-10-20 14:25:23 INFO] [rollback:27][39m No declared rollbacks, let's move on.
+[36m[2022-10-20 14:25:23 DEBUG] [__init__:399][39m No controls to apply on 'rollback'
+[32m[2022-10-20 14:25:23 INFO] [run:458][39m Experiment ended with status: completed
+[36m[2022-10-20 14:25:23 DEBUG] [__init__:399][39m No controls to apply on 'experiment'
+[36m[2022-10-20 14:25:23 DEBUG] [__init__:91][39m Cleaning up controls
+[36m[2022-10-20 14:25:23 DEBUG] [caching:42][39m Clearing activities cache
